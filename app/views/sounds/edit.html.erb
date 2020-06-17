@@ -1,2 +1,10 @@
 <h1>Sounds#edit</h1>
-<p>Find me in app/views/sounds/edit.html.erb</p>
+
+<% form_with(model: @sound) local: true do |f| %>
+  <=% f.label :title, 'メッセージ' %>
+  <=% f.text_field :title %>
+  <=% f.label :description, '説明' %>
+  <=% f.text_field :description %>
+
+  <=% f.submit '更新する' %>
+<% end %>
