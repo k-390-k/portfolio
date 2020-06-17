@@ -26,6 +26,7 @@ class SoundsController < ApplicationController
   end
 
   def edit
+    @sound = Sound.find(params[:id])
   end
 
   def update
