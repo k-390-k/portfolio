@@ -42,6 +42,11 @@ class SoundsController < ApplicationController
   end
 
   def destroy
+     @sound = Sound.find(params[:id])
+     @sound.destroy
+
+     flash[:success] ='投稿は削除されました'
+     redirect_to sounds_url
   end
 end
 
