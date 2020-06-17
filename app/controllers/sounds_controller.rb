@@ -30,6 +30,15 @@ class SoundsController < ApplicationController
   end
 
   def update
+    @sound = Sound.find(params[:id])
+
+    if @sound.update(sound_params)
+      flash[:success] = "更新が完了しました！"
+      redirect_to @sound
+    else
+      flash.now[:danger] = "更新ができませんでした、、、"
+      render :edit
+    end
   end
 
   def destroy
