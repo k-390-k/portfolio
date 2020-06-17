@@ -8,6 +8,7 @@ class SoundsController < ApplicationController
   end
 
   def new
+    @sound = Sound.new
   end
 
   def create
