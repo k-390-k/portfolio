@@ -14,6 +14,7 @@ class SoundsController < ApplicationController
   def create
     @sound =Sound.new(sound_params)
     
+    #保存が成功した場合は、@soundで格納されたインスタンスの詳細画面に飛ぶ
     if @sound.save
       flash[:success] = "投稿完了しました！"
       redirect_to @sound
@@ -34,6 +35,7 @@ class SoundsController < ApplicationController
   end
 end
 
+#Soundモデルクラス以外では使用できないことを明示的にしている。
 private
 
 #ストロングパラメータ
