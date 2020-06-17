@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  get 'sounds/index'
-  get 'sounds/show'
-  get 'sounds/new'
-  get 'sounds/edit'
+
 #SoundモデルのCRUD操作
 get 'sounds', to: 'sounds#index'
 get 'sounds/:id', to: 'sounds#show'
