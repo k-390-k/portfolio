@@ -1,6 +1,6 @@
 class SoundsController < ApplicationController
   def index
-    @sounds = Message.all
+    @sounds = Sound.all
   end
 
   def show
