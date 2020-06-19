@@ -1,0 +1,8 @@
+<h1>Sounds#inde</h1>
+
+<% @sounds.each do |sound| %>
+
+    <div><%=link_to sound.id, sound %>:<%= sound.title%></div>
+    <div><%= sound.description%></div>
+    
+<% end %>
