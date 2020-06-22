@@ -1,2 +1,10 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<%form_with(model: @user) local: true do |f|%>
+
+    <=%f.label :email, 'メールアドレス'%>
+    <=%f.text_field :email%>
+  
+    <=%f.label :password, 'パスワード'%>
+    <=%f.text_field :password%>
+  
+    <=%f.submit 'ログインする'%>
+  <%end%>
